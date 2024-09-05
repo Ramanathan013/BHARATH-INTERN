@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title> Registration Form</title>
-		
-		
-<link rel="stylesheet"
-href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-integrity=
-"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-crossorigin="anonymous"> 
-		
-<link rel="stylesheet" type="text/css" href="style.css">
-		
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Money Tracker WebA pp</title>
 </head>
 <body>
-	
-	<br>
-	<br>
-	<br>
-	<div class="container" >
-		<div class="row">
-		<div class="col-md-3">
-					
-		</div>
-				
-		<div class="col-md-6 main">
-					
-			<form action="http://127.0.0.1:5500/signup_success.html" method="post">	
+    <h1> Money Tracker Web App</h1>
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="College Fee">College Fee</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Food">Food</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Cool Drinks">Cool Drinks</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+    </div>
+    <div class="expenses-list">
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>
+                
+            </thead>
+            <tbody id="expense-table-body">
 
-			<h1>Registration form </h1>
-							
-			<input class="box" type="text" name="name" id="name"
-			placeholder="Name" required /><br>
-							
-			<input class="box" type="email" name="email" id="email"
-			placeholder="E-Mail " required /><br>
-							
-			<input class="box" type="password" name="password"
-			id="password" placeholder="Password " required/><br>
-							
-			<input class="box" type="text" name="phone" id="phone"
-			placeholder="Phone Number " required/><br>
-						<br>
-			<input type="submit" id="submitDetails"
-			name="submitDetails" value="Submit" /><br>
-					
-			</form>
-					
-		</div>
-				
-				
-		<div class="col-md-3">
-		</div>
-				
-	</div>
-	</div>
+            </tbody>
+            <tfoot>
+                <td>Total:</td>
+                <td id="total-amount"></td>
+                <td></td>
+                <td></td>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
